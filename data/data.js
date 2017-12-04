@@ -1,6 +1,6 @@
 module.exports =
   [{
-    'name': 'Le&ntilde;a',
+    'name': 'Lena',
     'id': 1,
     'Monday': '5 - 6pm',
     'Tuesday': '5 - 6pm',
