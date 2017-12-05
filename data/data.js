@@ -75,29 +75,29 @@ happyData =
 
 locationData = [{
   'name': 'Lena',
-  'address': '24 Broadway',
+  'address': '24 Broadway St',
   'website': 'https://www.lenadenver.com/happy-hour'
 },
 {
   'name': 'Gozo',
-  'address': '24 Broadway',
-  'website': 'gozo.com/happy-hour'
+  'address': '30 South Broadway St',
+  'website': 'http://gozodenver.com/happy-hour/'
 },{
   'name': "Barry's",
-  'address': '24 Broadway',
-  'website': 'barrys.com/happy-hour'
+  'address': '58 Broadway St',
+  'website': 'https://www.yelp.com/biz/barrys-on-broadway-denver'
 },{
   'name': 'Platform T',
-  'address': '24 Broadway',
-  'website': 'platformT.com/happy-hour'
+  'address': '95 Lincoln St',
+  'website': 'https://www.platformt.com/menu/'
 },{
   'name': 'Hornet',
-  'address': '24 Broadway',
-  'website': 'hornet.com/happy-hour'
+  'address': '76 Broadway St',
+  'website': 'http://hornetrestaurant.com/list-menu/happy-hour/'
 },{
   'name': 'Beatrice & Woodsley',
-  'address': '24 Broadway',
-  'website': 'bw.com/happy-hour'
+  'address': '38 S Broadway St',
+  'website': 'https://beatriceandwoodsley.com/#menus'
 }
 ];
 
