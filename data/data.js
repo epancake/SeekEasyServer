@@ -1,4 +1,4 @@
-module.exports =
+happyData =
   [{
     'name': 'Lena',
     'id': 1,
@@ -72,3 +72,36 @@ module.exports =
     'type': 'Food and Drink'
   },
 ];
+
+locationData = [{
+  'name': 'Lena',
+  'address': '24 Broadway',
+  'website': 'https://www.lenadenver.com/happy-hour'
+},
+{
+  'name': 'Gozo',
+  'address': '24 Broadway',
+  'website': 'gozo.com/happy-hour'
+},{
+  'name': "Barry's",
+  'address': '24 Broadway',
+  'website': 'barrys.com/happy-hour'
+},{
+  'name': 'Platform T',
+  'address': '24 Broadway',
+  'website': 'platformT.com/happy-hour'
+},{
+  'name': 'Hornet',
+  'address': '24 Broadway',
+  'website': 'hornet.com/happy-hour'
+},{
+  'name': 'Beatrice & Woodsley',
+  'address': '24 Broadway',
+  'website': 'bw.com/happy-hour'
+}
+];
+
+module.exports = {
+  happyData,
+  locationData
+}
