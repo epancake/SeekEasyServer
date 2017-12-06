@@ -4,9 +4,11 @@ const port = process.env.PORT || 3000;
 const data = require('./data/data.js');
 const cors = require('cors');
 const updatedData = [];
+const bodyParser = require('body-parser');
 
 
 app.use(cors())
+app.use(bodyParser.json())
 
 function addObjects (dataset) {
   data.happyData.map(item => {
@@ -30,4 +32,10 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   console.log('listening here ', port);
+});
+
+
+app.post('/', (req, res) => {
+  updatedData.push(req.body)
+  res.json("It works")
 });
