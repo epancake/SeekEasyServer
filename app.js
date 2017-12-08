@@ -5,26 +5,26 @@ const data = require('./data/data.js');
 const cors = require('cors');
 const updatedData = [];
 const bodyParser = require('body-parser');
-
+let happyData = data.happyData
+let locationData = data.locationData
 
 app.use(cors())
 app.use(bodyParser.json())
 
-function addObjects (dataset) {
-  data.happyData.map(item => {
-    for (var i = 0; i < data.locationData.length; i++) {
-      if (item.name === data.locationData[i].name) {
-        var newObject = Object.assign(item, data.locationData[i])
+function addObjects (array1, array2) {
+  return array1.map(item => {
+    for (var i = 0; i < array2.length; i++) {
+      if (item.name === array2[i].name) {
+        var newObject = Object.assign(item, array2[i])
         updatedData.push(newObject)
       }
-      console.log(updatedData)
-    } return happyData
+    } return newObject;
   })
 }
 
 // console.log(happyData)
 
-addObjects(data)
+addObjects(happyData, locationData)
 
 app.get('/', (req, res) => {
   res.json(updatedData);
@@ -39,3 +39,7 @@ app.post('/', (req, res) => {
   updatedData.push(req.body)
   res.json("It works")
 });
+
+module.exports = {
+  addObjects
+}
