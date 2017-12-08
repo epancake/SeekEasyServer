@@ -15,8 +15,8 @@ function addObjects (array1, array2) {
   return array1.map(item => {
     for (var i = 0; i < array2.length; i++) {
       if (item.name === array2[i].name) {
-        var newObject = Object.assign(item, array2[i])
-        updatedData.push(newObject)
+        var newObject = Object.assign(item, array2[i]);
+        updatedData.push(newObject);
       }
     } return newObject;
   })
