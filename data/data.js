@@ -2,13 +2,13 @@ happyData =
   [{
     'name': 'Lena',
     'id': 1,
-    'Monday': '5 - 6pm',
-    'Tuesday': '5 - 6pm',
-    'Wednesday': '5 - 6pm',
-    'Thursday': '5 - 6pm',
-    'Friday': '4 - 6pm',
-    'Saturday': '4 - 6pm',
-    'Sunday': '5 - 6pm',
+    'monday': '5 - 6pm',
+    'tuesday': '5 - 6pm',
+    'wednesday': '5 - 6pm',
+    'thursday': '5 - 6pm',
+    'friday': '4 - 6pm',
+    'saturday': '4 - 6pm',
+    'sunday': '5 - 6pm',
     'type': 'Food and Drink'
   },
   {
