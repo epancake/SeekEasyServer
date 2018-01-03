@@ -5,11 +5,11 @@ const data = require('./data/data.js');
 const cors = require('cors');
 const updatedData = [];
 const bodyParser = require('body-parser');
-let happyData = data.happyData
-let locationData = data.locationData
+let happyData = data.happyData;
+let locationData = data.locationData;
 
-app.use(cors())
-app.use(bodyParser.json())
+app.use(cors());
+app.use(bodyParser.json());
 
 function addObjects (array1, array2) {
   return array1.map(item => {
@@ -19,25 +19,22 @@ function addObjects (array1, array2) {
         updatedData.push(newObject);
       }
     } return newObject;
-  })
+  });
 }
 
-// console.log(happyData)
-
-addObjects(happyData, locationData)
+addObjects(happyData, locationData);
 
 app.get('/', (req, res) => {
   res.json(updatedData);
 });
 
-app.listen(port, () => {
-  console.log('listening here ', port);
+app.post('/', (req, res) => {
+  updatedData.push(req.body);
+  res.json("It works");
 });
 
-
-app.post('/', (req, res) => {
-  updatedData.push(req.body)
-  res.json("It works")
+app.listen(port, () => {
+  console.log('listening here ', port);
 });
 
 module.exports = {
