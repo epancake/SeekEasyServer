@@ -1,42 +1,65 @@
 var assert = require('assert');
 var app = require('../app');
-
+var testData = []
 var firstArray =
     [{
-      'name': 'Pete',
-      'id': 1,
+      'name': 'Lena',
+      'patio': true,
     },
     {
-      'name': 'Gargamel',
-      'id': 2,
+      'name': 'Gozo',
+      'patio': false,
     },
     ];
 
 var secondArray =
     [{
-      'name': 'Pete',
-      'cute': true
+      'name': 'Lena',
+      'address': '24 Broadway St',
+      'website': 'https://www.lenadenver.com/happy-hour'
     },
     {
-      'name': 'Gargamel',
-      'cute': false
-    }];
+      'name': 'Gozo',
+      'address': '30 South Broadway St',
+      'website': 'http://gozodenver.com/happy-hour/'
+    },
+    ];
 
 var combinedArray = [
   {
-    'name': 'Pete',
-    'id': 1,
-    'cute': true
+    'name': 'Lena',
+    'patio': true,
+    'address': '24 Broadway St',
+    'website': 'https://www.lenadenver.com/happy-hour'
   },
   {
-    'name': 'Gargamel',
-    'id': 2,
-    'cute': false
+    'name': 'Gozo',
+    'patio': false,
+    'address': '30 South Broadway St',
+    'website': 'http://gozodenver.com/happy-hour/'
   }
 ];
 
+aloneObject = {
+  'name': 'Lena',
+  'patio': true,
+};
+
+smashedObject = {
+  'name': 'Lena',
+  'patio': true,
+  'address': '24 Broadway St',
+  'website': 'https://www.lenadenver.com/happy-hour'
+};
+
 describe('#addObjects', ()=>{
-  it('smashes 2 objects together based on name', ()=>{
+  it('returns an array of all the smashed together objects', ()=>{
     assert.deepEqual(app.addObjects(firstArray, secondArray), combinedArray);
+  });
+});
+
+describe('#combineObjects', ()=>{
+  it('smashes 2 objects together based on name', ()=>{
+    assert.deepEqual(app.combineObjects(aloneObject, secondArray), smashedObject);
   });
 });
